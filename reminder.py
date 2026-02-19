@@ -1,14 +1,16 @@
 import pandas as pd
 import smtplib
+import os
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
+
 # ======================
 # EMAIL CONFIG
 # ======================
-SENDER_EMAIL = "richuuvivuu@gmail.com"
-APP_PASSWORD = "sedb yyri zdov yfrl"
+SENDER_EMAIL = os.environ["EMAIL_USER"]
+APP_PASSWORD = os.environ["EMAIL_PASS"]
 
 # ======================
 # SEND EMAIL FUNCTION
